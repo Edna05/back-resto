@@ -1,6 +1,5 @@
-const db = require('../config/db'); 
-const bcrypt = require('bcryptjs');
-
+import db from '../config/db.js'; 
+import bcrypt from 'bcryptjs';
 class AdminModel {
     async register(nom, mail, mot_de_pass) {
         const hashedPassword = await bcrypt.hash(mot_de_pass, 10);
@@ -19,4 +18,4 @@ class AdminModel {
     }
 }
 
-module.exports = new AdminModel();
+export default new AdminModel();

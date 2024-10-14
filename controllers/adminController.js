@@ -1,5 +1,5 @@
 
-const adminModel = require('../models/adminModel');
+import adminModel from '../models/adminModel.js';
 
 class AdminController {
     async register(req, res) {
@@ -23,4 +23,4 @@ class AdminController {
     }
 }
 
-module.exports = new AdminController();
+export default new AdminController();
